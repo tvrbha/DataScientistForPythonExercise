@@ -88,3 +88,15 @@ def calculate_dog_years(human_years):
 print("Exercise 5: Output")
 human_years=int(input("Input a dog's age in human years: "))
 calculate_dog_years(human_years)
+
+print("Exercise 6: Outputtttt")
+def find_max_number(number_list:list):
+    max_number=number_list[0]
+    for value_check in number_list:
+        if value_check>max_number:
+            max_number=value_check
+    else:
+        print('max_number :',max_number)
+
+my_num_list=[-7,-4,-6]
+find_max_number(my_num_list)
