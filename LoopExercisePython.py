@@ -100,3 +100,26 @@ def find_max_number(number_list:list):
 
 my_num_list=[-7,-4,-6]
 find_max_number(my_num_list)
+
+
+"""## 7. Write a Python function that takes a number as a parameter and check the number is prime or not."""
+def chk_prime_or_not(prime_number_chk):
+    prime_number=True
+    if prime_number_chk>=2 and prime_number_chk<=3:
+        prime_number = True
+    elif prime_number_chk==1:
+        prime_number = False
+    elif prime_number_chk > 3:
+        for chk_value in range(2,prime_number_chk):
+            if prime_number_chk%chk_value==0:
+                prime_number=False
+                break
+    return prime_number
+
+
+
+prime_number_chk=int(input('Enter the Number to Check Prime or No : '))
+if chk_prime_or_not(prime_number_chk):
+    print(f'{prime_number_chk} : IS A PRIME')
+else:
+    print(f'{prime_number_chk} : IS NOT PRIME')
