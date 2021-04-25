@@ -123,3 +123,36 @@ if chk_prime_or_not(prime_number_chk):
     print(f'{prime_number_chk} : IS A PRIME')
 else:
     print(f'{prime_number_chk} : IS NOT PRIME')
+
+"""# 8 Write a Python function that accepts a string and calculate the number of upper case letters and lower case letters. Go to the editor"""
+#97 to 122 lower cases 65 to 91 uppercase
+def uppercase_lowercase_count(string_to_calculate):
+
+    dict_count=dict()
+    for char in string_to_calculate:
+        if ord(char)>=97 and ord(char)<=122:
+            dict_count.update({'LOWER_CASE_COUNT':dict_count.get('LOWER_CASE_COUNT',0)+1})
+        elif ord(char)>=65 and ord(char)<=91:
+            dict_count.update({'UPPER_CASE_COUNT':dict_count.get('LOWER_CASE_COUNT',0)+1})
+            #dict_count.update('UPPER CASE COUNT', uppercase_count)
+    print (dict_count)
+    #print(f'{string_to_calculate} uppercase letters count : ',uppercase_count,'lower case count : ',lowercase_count)
+
+string_to_calculate=input('Enter The String : ')
+uppercase_lowercase_count(string_to_calculate)
+
+"""## 9. Write a Python program to reverse a string. and palindrome"""
+def reverse_given_string(string_to_be_revered):
+    #for char in reversed(string_to_be_revereda):
+    reverse_string=""
+    for char in range(len(string_to_be_revered)-1,-1,-1):
+        reverse_string=reverse_string+string_to_be_revered[char]
+    print (reverse_string)
+    if reverse_string==string_to_be_revered:
+        print('Palindrome : ',string_to_be_revered,'Reversed String: ',reverse_string)
+    else:
+        print('Not Palindrome : ', string_to_be_revered, 'Reversed String: ', reverse_string)
+
+
+string_to_be_reversed=input('Enter The String :  ')
+reverse_given_string(string_to_be_reversed)
