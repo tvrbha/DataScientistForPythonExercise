@@ -156,3 +156,17 @@ def reverse_given_string(string_to_be_revered):
 
 string_to_be_reversed=input('Enter The String :  ')
 reverse_given_string(string_to_be_reversed)
+
+""" 10. Write a Python program to find  the greatest common divisor (gcd) of two integers."""
+
+def find_greatest_common_divisor(first_number:int=30,second_number:int=36):
+    max_number=0
+    div_number=2
+    while div_number<=first_number and div_number<=second_number:
+        if first_number%div_number==0 and second_number%div_number==0:
+            if div_number > max_number:
+                max_number=div_number
+        div_number=div_number+1
+    print('gcd : ',max_number)
+
+find_greatest_common_divisor()
